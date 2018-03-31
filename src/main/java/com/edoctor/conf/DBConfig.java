@@ -29,9 +29,9 @@ public class DBConfig {
     public DataSource mysqlDataSourceDevelopment() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://123.207.162.21:3306/edoctor?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8");
-        ds.setUsername("dongyuguo");
-        ds.setPassword("tanktju");
+        ds.setUrl("jdbc:mysql://ip:port/edoctor?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8");
+        ds.setUsername("name");
+        ds.setPassword("password");
         return ds;
     }
 
@@ -40,9 +40,9 @@ public class DBConfig {
     public DataSource mysqlDataSourceProduction() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://10.10.119.5:3306/edoctor?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8");
-        ds.setUsername("root");
-        ds.setPassword("EDoctor666");
+        ds.setUrl("jdbc:mysql://ip:port/edoctor?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8");
+        ds.setUsername("name2");
+        ds.setPassword("password2");
         return ds;
     }
 

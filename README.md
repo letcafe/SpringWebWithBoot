@@ -1,8 +1,7 @@
-# EDoctor-Web In Server  
-## *China Telecom Proj* 
+# SpringBoot Web Project Template
 ## Developer information
-##### Maintainer:dongyuguo
-##### Email:letcafe@outlook.com
+##### Maintainer: dongyuguo
+##### Email: letcafe@outlook.com
 ## Developing enviroment
 + WEB容器：tomcat9
 + JDK：1.8
