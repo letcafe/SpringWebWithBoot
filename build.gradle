@@ -52,6 +52,10 @@ dependencies {
     // MySQL JDBC
     compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
 
+    // Email
+    compile group: 'javax.mail', name: 'javax.mail-api', version: '1.6.1'
+    compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.1'
+
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.0.0.RELEASE'
 
 }

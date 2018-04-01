@@ -11,6 +11,7 @@
 >SpringFox Swagger support:https://springfox.github.io/springfox/  
 >Hibernate support:http://hibernate.org/  
 >Gradle support:https://gradle.org/
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 
 ## Deploy notice
 + 访问URL：修改webapp/api/index.html下的URL为本地localhost即可在本地运行  
@@ -18,5 +19,9 @@
 
 ## Developing log
 ### 2018-3-31 
-1. 新增：Spring Boot完全实现SpringMVC，强大到不可附加！
+1. New：Spring Boot makes SpringMVC
+
+### 2018-3-31 
+1. New：Spring email include plainText and email with file list
+2. <i class="fa fa-user-o" aria-hidden="true"></i>
 
