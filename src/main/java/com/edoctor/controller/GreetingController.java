@@ -3,11 +3,8 @@ package com.edoctor.controller;
 import com.edoctor.bean.Device;
 import com.edoctor.bean.RestMessage;
 import com.edoctor.service.DeviceRepository;
-import com.edoctor.util.EmailUtil;
+import com.edoctor.service.EmailService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -25,21 +22,12 @@ public class GreetingController {
 
     private DeviceRepository deviceRepository;
 
-    private EmailUtil emailUtil;
+    private EmailService emailService;
 
     @Autowired
-    GreetingController(DeviceRepository deviceRepository, EmailUtil emailUtil) {
+    GreetingController(DeviceRepository deviceRepository, EmailService emailService) {
         this.deviceRepository = deviceRepository;
-        this.emailUtil = emailUtil;
-    }
-
-
-    @RequestMapping(value = "greeting", method = RequestMethod.GET, produces = "application/json")
-    public RestMessage<List<Device>> greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) throws MessagingException {
-        RestMessage<List<Device>> restMessage = new RestMessage<>();
-        emailUtil.sendSimpleTextEmail("gdycn@qq.com","letcafe@outlook.com", "helloWorld", LocalDateTime.now().toString());
-        restMessage.setCode(200).setMsg("success").setData(null);
-        return restMessage;
+        this.emailService = emailService;
     }
 
 

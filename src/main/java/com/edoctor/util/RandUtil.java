@@ -1,7 +1,10 @@
 package com.edoctor.util;
 
 
+import org.springframework.jmx.export.annotation.ManagedOperation;
+
 import java.util.Random;
+
 
 public class RandUtil {
 
@@ -11,6 +14,7 @@ public class RandUtil {
         random = new Random();
     }
 
+    @ManagedOperation
     public static String randNumber(int length) {
         StringBuffer buffer = new StringBuffer();
         for(int i = 0; i < length; i++) {

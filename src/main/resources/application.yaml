@@ -1,0 +1,21 @@
+spring:
+  data:
+    mongodb:
+      database: EDoctor
+      host: 59.110.231.87
+      port: 27017
+  profiles:
+    active: test
+  redis:
+    sentinel:
+      master: myMaster
+      nodes: 59.110.231.87:6480
+  jpa:
+    # make Spring do db operation when render web views
+    open-in-view: true
+server:
+  port: 8080
+  servlet:
+    context-path: /SpringWebWithBoot
+logging:
+  config: classpath:log4j2.xml
