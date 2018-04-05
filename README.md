@@ -30,4 +30,7 @@
 4. New：Jpa integration
 5. New：Swagger2 integration
 6. New：Jmx integration
+7. New：log4j2 integration
+8. New：Gradle build integration
+9. New：War for Tomcat integration
 
