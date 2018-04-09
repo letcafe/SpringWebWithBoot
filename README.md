@@ -1,8 +1,8 @@
 # SpringBoot Web Project Template
 ## Developer information
-##### Maintainer: dongyuguo
+##### Maintainer: LetCafe
 ##### Email: letcafe@outlook.com
-## Developing enviroment
+## Developing environment
 + Web Container：tomcat9
 + JDK：1.8
 + DEV IDE：Intellij IDEA
@@ -33,4 +33,7 @@
 7. New：log4j2 integration
 8. New：Gradle build integration
 9. New：War for Tomcat integration
+
+### 2018-4-5 
+1. New：MyBatis integration
 

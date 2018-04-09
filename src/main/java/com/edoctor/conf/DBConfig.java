@@ -11,7 +11,6 @@ import javax.sql.DataSource;
 public class DBConfig {
 
 
-    @Profile("test")
     @Bean
     public DataSource mysqlDataSourceTest() {
         DriverManagerDataSource ds = new DriverManagerDataSource();

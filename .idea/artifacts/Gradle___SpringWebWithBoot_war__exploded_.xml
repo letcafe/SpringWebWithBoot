@@ -37,6 +37,9 @@
           <element id="library" level="project" name="Gradle: redis.clients:jedis:2.9.0" />
           <element id="library" level="project" name="Gradle: javax.mail:javax.mail-api:1.6.1" />
           <element id="library" level="project" name="Gradle: com.sun.mail:javax.mail:1.6.1" />
+          <element id="library" level="project" name="Gradle: org.apache.activemq:activemq-spring:5.15.3" />
+          <element id="library" level="project" name="Gradle: org.apache.activemq:activemq-pool:5.15.3" />
+          <element id="library" level="project" name="Gradle: org.mybatis:mybatis-spring:1.3.2" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.0.0.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-aop:2.0.0.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter:2.0.0.RELEASE" />
@@ -81,16 +84,19 @@
           <element id="library" level="project" name="Gradle: com.fasterxml:classmate:1.3.4" />
           <element id="library" level="project" name="Gradle: org.springframework.plugin:spring-plugin-metadata:1.2.0.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.plugin:spring-plugin-core:1.2.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.apache.activemq:activemq-jms-pool:5.15.3" />
+          <element id="library" level="project" name="Gradle: org.apache.activemq:activemq-openwire-legacy:5.15.3" />
+          <element id="library" level="project" name="Gradle: org.apache.activemq:activemq-client:5.15.3" />
           <element id="library" level="project" name="Gradle: org.thymeleaf:thymeleaf:3.0.9.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-keyvalue:2.0.5.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-commons:2.0.5.RELEASE" />
-          <element id="library" level="project" name="Gradle: org.apache.activemq:activemq-openwire-legacy:5.15.3" />
-          <element id="library" level="project" name="Gradle: org.apache.activemq:activemq-client:5.15.3" />
           <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
           <element id="library" level="project" name="Gradle: org.mapstruct:mapstruct:1.2.0.Final" />
           <element id="library" level="project" name="Gradle: org.json:json:20170516" />
           <element id="library" level="project" name="Gradle: org.apache.commons:commons-pool2:2.5.0" />
           <element id="library" level="project" name="Gradle: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Gradle: org.apache.xbean:xbean-spring:4.2" />
+          <element id="library" level="project" name="Gradle: org.apache.geronimo.specs:geronimo-jta_1.0.1B_spec:1.0.1" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:2.0.0.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot:2.0.0.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-context-support:5.0.4.RELEASE" />
@@ -127,21 +133,17 @@
           <element id="library" level="project" name="Gradle: io.netty:netty-common:4.1.22.Final" />
           <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.10.0" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
+          <element id="library" level="project" name="Gradle: org.apache.geronimo.specs:geronimo-jms_1.1_spec:1.1.1" />
+          <element id="library" level="project" name="Gradle: org.fusesource.hawtbuf:hawtbuf:1.11" />
+          <element id="library" level="project" name="Gradle: org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:1.0.1" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.0.4.RELEASE" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.4" />
           <element id="library" level="project" name="Gradle: org.attoparser:attoparser:2.0.4.RELEASE" />
           <element id="library" level="project" name="Gradle: org.unbescape:unbescape:1.1.5.RELEASE" />
           <element id="library" level="project" name="Gradle: org.reactivestreams:reactive-streams:1.0.2" />
-          <element id="library" level="project" name="Gradle: org.fusesource.hawtbuf:hawtbuf:1.11" />
-          <element id="library" level="project" name="Gradle: org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:1.0.1" />
           <element id="library" level="project" name="Gradle: net.bytebuddy:byte-buddy:1.7.10" />
           <element id="library" level="project" name="Gradle: org.atteo:evo-inflector:1.2.2" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-spring/5.15.3/d627114e983ed9dda20f7ff6fcfd900c6b9680fc/activemq-spring-5.15.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-pool/5.15.3/35aacf28b50173fad819a4c243c84d80aa8908c4/activemq-pool-5.15.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.activemq/activemq-jms-pool/5.15.3/d540bb68126688de0dd7dc06378f7127a948d2f7/activemq-jms-pool-5.15.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.xbean/xbean-spring/4.2/28634a784c3091b1b3daf8eb5e0e512ae3e0ca35/xbean-spring-4.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.geronimo.specs/geronimo-jta_1.0.1B_spec/1.0.1/c9e67d21082a497f20e4ce87be1379faceb9c087/geronimo-jta_1.0.1B_spec-1.0.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.geronimo.specs/geronimo-jms_1.1_spec/1.1.1/c872b46c601d8dc03633288b81269f9e42762cea/geronimo-jms_1.1_spec-1.1.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.4.6/a77a546f679533837f6c6a75c034b669f3ce6a2f/mybatis-3.4.6.jar" />
         </element>
       </element>
     </root>

@@ -1,0 +1,129 @@
+[20:58:34:069] [ERROR] - org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:833) - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectorServerFactoryBean' defined in class path resource [com/edoctor/conf/JmxServerConfig.class]: Invocation of init method failed; nested exception is java.io.IOException: Cannot bind to URL [rmi://localhost:1099/SpringWebWithBoot]: javax.naming.NoPermissionException [Root exception is java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.AccessException: Cannot modify this registry]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1710) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:502) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:312) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:741) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:388) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1234) [spring-boot-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at com.edoctor.controller.Application.main(Application.java:14) [classes/:?]
+Caused by: java.io.IOException: Cannot bind to URL [rmi://localhost:1099/SpringWebWithBoot]: javax.naming.NoPermissionException [Root exception is java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.AccessException: Cannot modify this registry]
+	at javax.management.remote.rmi.RMIConnectorServer.newIOException(RMIConnectorServer.java:827) ~[?:1.8.0_121]
+	at javax.management.remote.rmi.RMIConnectorServer.start(RMIConnectorServer.java:432) ~[?:1.8.0_121]
+	at org.springframework.jmx.support.ConnectorServerFactoryBean.afterPropertiesSet(ConnectorServerFactoryBean.java:191) ~[spring-context-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1769) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	... 16 more
+Caused by: javax.naming.NoPermissionException
+	at com.sun.jndi.rmi.registry.RegistryContext.bind(RegistryContext.java:161) ~[?:1.8.0_121]
+	at com.sun.jndi.toolkit.url.GenericURLContext.bind(GenericURLContext.java:228) ~[?:1.8.0_121]
+	at javax.naming.InitialContext.bind(InitialContext.java:425) ~[?:1.8.0_121]
+	at javax.management.remote.rmi.RMIConnectorServer.bind(RMIConnectorServer.java:644) ~[?:1.8.0_121]
+	at javax.management.remote.rmi.RMIConnectorServer.start(RMIConnectorServer.java:427) ~[?:1.8.0_121]
+	at org.springframework.jmx.support.ConnectorServerFactoryBean.afterPropertiesSet(ConnectorServerFactoryBean.java:191) ~[spring-context-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1769) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	... 16 more
+Caused by: java.rmi.ServerException: RemoteException occurred in server thread; nested exception is: 
+	java.rmi.AccessException: Cannot modify this registry
+	at sun.rmi.server.UnicastServerRef.oldDispatch(UnicastServerRef.java:460) ~[?:1.8.0_121]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:294) ~[?:1.8.0_121]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:1.8.0_121]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:1.8.0_121]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_121]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:1.8.0_121]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568) ~[?:1.8.0_121]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826) ~[?:1.8.0_121]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683) ~[?:1.8.0_121]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_121]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682) ~[?:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[?:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[?:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745) ~[?:1.8.0_121]
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:276) ~[?:1.8.0_121]
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:253) ~[?:1.8.0_121]
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:379) ~[?:1.8.0_121]
+	at sun.rmi.registry.RegistryImpl_Stub.bind(Unknown Source) ~[?:1.8.0_121]
+	at com.sun.jndi.rmi.registry.RegistryContext.bind(RegistryContext.java:155) ~[?:1.8.0_121]
+	at com.sun.jndi.toolkit.url.GenericURLContext.bind(GenericURLContext.java:228) ~[?:1.8.0_121]
+	at javax.naming.InitialContext.bind(InitialContext.java:425) ~[?:1.8.0_121]
+	at javax.management.remote.rmi.RMIConnectorServer.bind(RMIConnectorServer.java:644) ~[?:1.8.0_121]
+	at javax.management.remote.rmi.RMIConnectorServer.start(RMIConnectorServer.java:427) ~[?:1.8.0_121]
+	at org.springframework.jmx.support.ConnectorServerFactoryBean.afterPropertiesSet(ConnectorServerFactoryBean.java:191) ~[spring-context-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1769) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706) ~[spring-beans-5.0.4.RELEASE.jar:5.0.4.RELEASE]
+	... 16 more
+Caused by: java.rmi.AccessException: Cannot modify this registry
+	at sun.management.jmxremote.SingleEntryRegistry.bind(SingleEntryRegistry.java:76) ~[?:1.8.0_121]
+	at sun.rmi.registry.RegistryImpl_Skel.dispatch(Unknown Source) ~[?:1.8.0_121]
+	at sun.rmi.server.UnicastServerRef.oldDispatch(UnicastServerRef.java:450) ~[?:1.8.0_121]
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:294) ~[?:1.8.0_121]
+	at sun.rmi.transport.Transport$1.run(Transport.java:200) ~[?:1.8.0_121]
+	at sun.rmi.transport.Transport$1.run(Transport.java:197) ~[?:1.8.0_121]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_121]
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[?:1.8.0_121]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568) ~[?:1.8.0_121]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826) ~[?:1.8.0_121]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683) ~[?:1.8.0_121]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_121]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682) ~[?:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[?:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[?:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745) ~[?:1.8.0_121]
+[21:08:43:980] [ERROR] - org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42) - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field deviceMapper in com.edoctor.api.MyBatisApi required a bean of type 'com.edoctor.mapper.DeviceMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.edoctor.mapper.DeviceMapper' in your configuration.
+
+[21:09:52:274] [ERROR] - org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42) - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field deviceMapper in com.edoctor.api.MyBatisApi required a bean of type 'com.edoctor.mapper.DeviceMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.edoctor.mapper.DeviceMapper' in your configuration.
+
+[21:14:37:401] [ERROR] - org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42) - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field deviceMapper in com.edoctor.api.MyBatisApi required a bean of type 'com.edoctor.service.DeviceService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.edoctor.service.DeviceService' in your configuration.
+

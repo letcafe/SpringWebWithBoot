@@ -36,9 +36,9 @@ public class JpaConfig {
     public EntityManagerFactory entityManagerFactory(DataSource dataSource, HibernateJpaVendorAdapter jpaVendorAdapter) {
 
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
-        factoryBean.setJpaVendorAdapter(jpaVendorAdapter);//1
-        factoryBean.setPackagesToScan("com.edoctor.bean");//2
-        factoryBean.setDataSource(dataSource);//3
+        factoryBean.setJpaVendorAdapter(jpaVendorAdapter);
+        factoryBean.setPackagesToScan("com.edoctor.bean");
+        factoryBean.setDataSource(dataSource);
         factoryBean.afterPropertiesSet();
 
         return factoryBean.getObject();
