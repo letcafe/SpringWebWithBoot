@@ -2,7 +2,7 @@ package com.edoctor.controller;
 
 import com.edoctor.bean.Device;
 import com.edoctor.bean.RestMessage;
-import com.edoctor.service.DeviceRepository;
+import com.edoctor.service.DeviceService;
 import com.edoctor.service.EmailService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +20,13 @@ import java.util.List;
 @RequestMapping("/")
 public class GreetingController {
 
-    private DeviceRepository deviceRepository;
+    private DeviceService deviceService;
 
     private EmailService emailService;
 
     @Autowired
-    GreetingController(DeviceRepository deviceRepository, EmailService emailService) {
-        this.deviceRepository = deviceRepository;
+    GreetingController(DeviceService deviceService, EmailService emailService) {
+        this.deviceService = deviceService;
         this.emailService = emailService;
     }
 

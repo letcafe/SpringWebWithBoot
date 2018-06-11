@@ -41,6 +41,10 @@ public class Device {
     public Device() {
     }
 
+    public Device(String deviceId) {
+        this.deviceId = deviceId;
+    }
+
     public Device(String name, String description, double lng, double lat, int owner_id, String area) {
         this.name = name;
         this.description = description;

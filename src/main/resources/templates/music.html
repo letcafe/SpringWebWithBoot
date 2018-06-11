@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script>
+    url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg?g_tk=5381&uin=0&format=json&inCharset=utf-8&outCharset=utf-8&notice=0&platform=h5&needNewCode=1&tpl=3&page=detail&type=top&topid=27&_=1519963122923';
+    $.ajax({
+        url:url,
+        type:"get",
+        dataType:'jsonp',
+        jsonp: "jsonpCallback",
+        scriptCharset: 'GBK',//解决中文乱码
+        success: function(data){
+            console.log(data);
+        },
+        error:function (e) {
+            console.log('error');
+        }
+    });
+</script>
+</body>
+</html>

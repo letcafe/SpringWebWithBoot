@@ -14,7 +14,7 @@ import javax.sql.DataSource;
  * 3.在Dao中定义接口以及附带上SQL语句，不需要DAO层的实现（类似但不等于JPA）
  */
 @Configuration
-@MapperScan("com.edoctor.dao")
+@MapperScan("com.edoctor.dao.mybatis")
 public class MyBatisConfig {
 
     @Bean

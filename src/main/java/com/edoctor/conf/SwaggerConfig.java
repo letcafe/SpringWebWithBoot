@@ -1,8 +1,5 @@
 package com.edoctor.conf;
 
-/**
- * Created by haoyifen on 16-9-28 2016 下午5:43
- */
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,6 +16,7 @@ import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.util.HashSet;
 import java.util.List;
 
 import static com.google.common.collect.Lists.newArrayList;
@@ -40,7 +38,6 @@ public class SwaggerConfig {
                  .apis(RequestHandlerSelectors.basePackage("com.edoctor.api"))
                  .build()
                  .apiInfo(apiInfo());
-
      }
 
     private ApiKey apiKey() {

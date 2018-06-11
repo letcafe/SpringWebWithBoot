@@ -1,7 +1,7 @@
 package com.edoctor.service.impl;
 
 import com.edoctor.bean.User;
-import com.edoctor.dao.UserDao;
+import com.edoctor.dao.mybatis.UserDao;
 import com.edoctor.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0da5c78d-624f-4f7a-a0ee-e454f8bedcc5" name="Aliyun老师赞助服务器" url="http://59.110.231.87">
+        <fileTransfer host="59.110.231.87" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="87af3c5a-0d4e-477f-b8aa-b88e9b216e3e" name="实验室北京网站服务器" url="http://tanktju.com">
+        <fileTransfer host="tanktju.com" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

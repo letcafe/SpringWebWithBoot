@@ -2,7 +2,6 @@ package com.edoctor.api;
 
 import com.edoctor.bean.RestMessage;
 import com.edoctor.bean.User;
-import com.edoctor.dao.UserDao;
 import com.edoctor.service.UserService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;

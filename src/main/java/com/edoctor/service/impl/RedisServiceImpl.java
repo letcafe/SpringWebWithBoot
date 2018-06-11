@@ -1,6 +1,6 @@
 package com.edoctor.service.impl;
 
-import com.edoctor.dao.RedisDao;
+import com.edoctor.dao.repository.RedisDao;
 import com.edoctor.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

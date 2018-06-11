@@ -13,7 +13,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "com.edoctor.service")
+@EnableJpaRepositories(basePackages = "com.edoctor.dao.repository")
 public class JpaConfig {
 
     @Bean
@@ -40,7 +40,6 @@ public class JpaConfig {
         factoryBean.setPackagesToScan("com.edoctor.bean");
         factoryBean.setDataSource(dataSource);
         factoryBean.afterPropertiesSet();
-
         return factoryBean.getObject();
     }
 }

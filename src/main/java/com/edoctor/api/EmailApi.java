@@ -1,10 +1,8 @@
 package com.edoctor.api;
 
-import com.edoctor.bean.Device;
 import com.edoctor.bean.RestMessage;
-import com.edoctor.controller.MBeanTestController;
 import com.edoctor.enums.EMAIL_LOCALE;
-import com.edoctor.service.DeviceRepository;
+import com.edoctor.service.DeviceService;
 import com.edoctor.service.EmailService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,24 +13,22 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.mail.MessagingException;
-import javax.management.MBeanServerConnection;
 import java.io.IOException;
 
 import java.util.Locale;
-import java.util.Set;
 
 @Api(value = "消息队列统计及操作API")
 @RestController
 @RequestMapping("/api/v1/email")
 public class EmailApi {
 
-    private DeviceRepository deviceRepository;
+    private DeviceService deviceService;
 
     private EmailService emailService;
 
     @Autowired
-    EmailApi(DeviceRepository deviceRepository, EmailService emailService) {
-        this.deviceRepository = deviceRepository;
+    EmailApi(DeviceService deviceService, EmailService emailService) {
+        this.deviceService = deviceService;
         this.emailService = emailService;
     }
 
