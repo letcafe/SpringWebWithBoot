@@ -9,7 +9,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.listener.DefaultMessageListenerContainer;
 import org.springframework.jms.listener.adapter.MessageListenerAdapter;
-import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
+import org.springframework.jms.support.converter.
+        MappingJackson2MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
 
 import java.util.Arrays;
@@ -62,10 +63,10 @@ public class MQConfig {
     // 异步接受消息的消息监听器-适配器，这个为异步监听接受的处理方法以及类名称。同时使用Jackson2解序列化，解析对象进行处理
     @Bean
     MessageListenerAdapter messageListenerAdapter() {
-        MessageListenerAdapter adapter = new MessageListenerAdapter();
-        adapter.setMessageConverter(getJacksonMessageConverter());
+        MessageListenerAdapter adapter = new MessageListenerAdapter();//改：标记为控制器类P478页
         adapter.setDelegate(new ConsumeMQController());
         adapter.setDefaultListenerMethod("printStringValue");
+        adapter.setMessageConverter(getJacksonMessageConverter());
         return adapter;
     }
 

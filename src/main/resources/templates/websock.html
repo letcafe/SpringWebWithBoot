@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" th:href="@{/webjars/bootstrap/4.1.1/dist/css/bootstrap.css}" />
+    <link type="text/css" th:href="@{/webjars/bootstrap/4.1.1/dist/css/bootstrap.min.css}" />
+</head>
+<body>
+    <div>
+        <button onclick="subscribe()">订阅队列</button>
+        <button onclick="sendMessage()">发送消息</button>
+    </div>
+    <div>
+        <table style="border: 1px solid">
+            <th>sendMsg</th><th>getMsg</th>
+            <tr>
+                <td style="border: 1px solid"><span id="sendMsg"></span></td>
+                <td style="border: 1px solid"><span id="getMsg"></span></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script th:src="@{/webjars/sockjs-client/1.1.5/dist/sockjs.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.1.1/dist/js/bootstrap.min.js}"></script>
+<script th:src="@{/webjars/stomp-websocket/2.3.4/lib/stomp.js}"></script>
+<script th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}"></script>
+<script>
+
+    // 订阅队列的消息，一旦有数据返回，将会触发回调函数
+    var subscribe = function() {
+        var subStomp = Stomp.over(new SockJS('macropolo'));
+        subStomp.connect('username', 'password', function(frame) {
+            var queueName = "/topic/macro2";
+            // 订阅队列，并设置相应的回调函数,，监听对应的回调函数即为一个MQ消费者
+            subStomp.subscribe(queueName, handleStompMessage);
+            alert("订阅队列[" + queueName + "] 成功");
+        });
+
+        var handleStompMessage = function(incoming) {
+            var message = JSON.parse(incoming.body);
+            $("#getMsg").append("<br/><b>Get " + message.message + "!</b>");
+        }
+    };
+
+    // 向队列发送消息
+    var sendStomp = Stomp.over(new SockJS('macropolo'));
+    sendStomp.connect('username', 'password', function(frame) {
+        console.log('[Client] send Stomp connection opened!');
+    });
+    var sendMessage = function() {
+        var payload = JSON.stringify({'message' : 'Macro'});
+        // 向指定队列或主题发送消息
+        sendStomp.send("/topic/macro2", {}, payload);
+        $("#sendMsg").append("<br/><b>Send " + payload + "!</b>");
+    };
+</script>
+</html>

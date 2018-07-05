@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" >YIF
 <head>
 <meta charset="utf-8">
 <title>iyufei</title>
@@ -21,10 +21,10 @@
 }
 </style>
 <!-- 返回顶部调用 begin -->
-<link href="../static/css/lrtk.css" rel="stylesheet" />
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/js.js"></script>
+<link th:href="@{/css/lrtk.css}" rel="stylesheet" />
+<script type="text/javascript" th:src="@{/static/js/jquery.js/jquery.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/bootstrap.min.js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/js.js/js.js}"></script>
 <!-- 返回顶部调用 end-->
 <!--[if lt IE 9]>
 <script src="./js/modernizr.js"></script>
@@ -37,7 +37,7 @@
       <li><a href="/" >21号我就要离去了，抓紧时间多看看我呢</a></li>
 
     </ul>
-    <script src="js/silder.js"></script><!--获取当前页导航 高亮显示标题--> 
+    <script src="../static/js/silder.js"></script><!--获取当前页导航 高亮显示标题-->
   </nav>
 </header>
 <div align=center>
@@ -59,7 +59,7 @@
 <!--header end-->
 <div id="mainbody">
   <div class="info">
-    <figure> <img src="images/art.jpg"  alt="Panama Hat">
+    <figure> <img th:src="@{/images/art.jpg}"  alt="Panama Hat">
     </figure>
     <div class="card">
       <h1>我的名片</h1>
@@ -90,7 +90,7 @@
           <ul class="textinfo">
 		  <div style="630px">
 			  <div class="log_title">
-				<a href="/"><img src="images/s1.jpg"></a>
+				<a href="/"><img th:src="@{/images/s1.jpg}"></a>
 			  </div>
 			  <div class="log_content">
 			    <p> 我想你我遇到你，但是你不知道我的名字应该有一个多月了吧，师兄们一再帮我，而我却因为自己的胆怯，错失了很多机会。今天以去南京帮着加你微信为名
@@ -122,7 +122,7 @@
           <ul class="textinfo">
 		  <div style="630px">
 			  <div class="log_title">
-				<a href="/"><img src="images/s1.jpg"></a>
+				<a href="/"><img th:src="@{/images/s1.jpg}"></a>
 			  </div>
 			  <div class="log_content">
 				<p>当天晚上，听他们说你在二楼大厅那坐着，好像很难过。我真的很想过去，恨不得马上看看你怎么样。可是这样会不会太突兀，你也许会更加无所适从。</p>
@@ -154,7 +154,7 @@
           <ul class="textinfo">
 		  <div style="630px">
 			  <div class="log_title">
-				<a href="/"><img src="images/s1.jpg"></a>
+				<a href="/"><img th:src="@{/images/s1.jpg}"></a>
 			  </div>
 			  <div class="log_content">
 			    <p>早上醒了之后，发现你说给我做了一杯咖啡，我好感动，恨不得脸不洗牙不刷地就来拿（考虑到形象，我立马撤销了这个想法:Ctrl + Z）
@@ -187,7 +187,7 @@
           <ul class="textinfo">
 		  <div style="630px">
 			  <div class="log_title">
-				<a href="/"><img src="images/s1.jpg"></a>
+				<a href="/"><img th:src="@{/images/s1.jpg}"></a>
 			  </div>
 			  <div class="log_content">
 			    <p>到了第二天，我依然没有忘记你的翻译采访这件事，记得你说要在计算机楼做录入，不是一楼就是二楼，我想借此表现一下，我觉得你可能是白天有课，晚上做录入，于是到了晚上，我们吃饭回来，我先去看看你在不在一楼的自习室，结果不在，到了二楼109，看到你已经在吧台上，问了一下，知道你已经写完了，很遗憾，我没能帮什么忙。</p>
@@ -255,7 +255,7 @@
       </div>
       <div class="viny">
         <dl>
-          <dt class="art"><img src="images/balloon.jpg" alt="专辑"></dt>
+          <dt class="art"><img th:src="@{images/balloon.jpg}" alt="专辑"></dt>
           <dd class="icon-song"><span></span>告白气球</dd>
           <dd class="icon-artist"><span></span>歌手：Jay Chou</dd>
           <dd class="icon-album"><span></span>所属专辑：《周杰伦的床边故事》</dd>

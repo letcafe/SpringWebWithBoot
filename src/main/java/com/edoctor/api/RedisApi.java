@@ -1,6 +1,5 @@
 package com.edoctor.api;
 
-import com.edoctor.bean.Device;
 import com.edoctor.bean.RestMessage;
 import com.edoctor.service.RedisService;
 import io.swagger.annotations.*;

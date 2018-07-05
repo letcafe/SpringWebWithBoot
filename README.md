@@ -34,6 +34,12 @@
 8. New：Gradle build integration
 9. New：War for Tomcat integration
 
-### 2018-4-5 
+### 2018-4-25 
 1. New：MyBatis integration
+
+### 2018-7-3
+1. New: WebSocket integration
+2. New: SockJS integration
+2. New: STOMP integration
+3. New: webjars("org.webjars.bower") integration
 

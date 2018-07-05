@@ -27,33 +27,39 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+    // SpringBoot support : WEB
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.0.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.0.0.RELEASE'
 
+    // SpringBoot support : DB
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.0.0.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.0.0.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.0.0.RELEASE'
-    runtime group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '2.0.0.RELEASE'
 
+    // SpringBoot support : Middleware
+    runtime group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '2.0.0.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.0.0.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-activemq', version: '2.0.0.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '2.0.0.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.0.0.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-websocket', version: '2.0.0.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.0.0.RELEASE'
 
 
 
-    // https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+    // https://mvnrepository.com/artifact/org.springframework/spring-web
+    compile group: 'org.springframework', name: 'spring-web', version: '5.0.7.RELEASE'
+
+    // SpringFox for Swagger2 support
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.8.0'
-    // https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
     compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.8.0'
 
     // Aliyun short message service
     compile group: 'com.aliyun', name: 'aliyun-java-sdk-dysmsapi', version: '1.0.0'
     compile group: 'com.aliyun', name: 'aliyun-java-sdk-core', version: '3.5.0'
 
-    // commons-io
+    // commons-io and file upload
     compile group: 'commons-io', name: 'commons-io', version: '2.6'
-    // file upload
     compile group: 'commons-net', name: 'commons-net', version: '3.6'
 
     // MySQL JDBC
@@ -77,11 +83,25 @@ dependencies {
     // DBCP db pool
     compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.2.0'
 
+    // Stomp with Broker,if not using Message Broker,this could be deleted
+    compile group: 'io.projectreactor', name: 'reactor-core', version: '3.1.8.RELEASE'
+    compile group: 'io.projectreactor.ipc', name: 'reactor-netty', version: '0.7.8.RELEASE'
+
+    /**
+     * Web Jars Start
+     */
+    // sockjs-client
+    compile group: 'org.webjars.bower', name: 'sockjs-client', version: '1.1.5'
+    compile group: 'org.webjars.bower', name: 'bootstrap', version: '4.1.1'
+    compile group: 'org.webjars.bower', name: 'stomp-websocket', version: '2.3.4'
+    compile group: 'org.webjars.bower', name: 'jquery', version: '3.3.1'
+
     // google translate
     // key -> AIzaSyCRSpbVR93m59LWsIqLEW4GUtOoVp-GFb8
 //    compile group:'com.google.cloud', name:'google-cloud-translate', version:'1.28.0'
 
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.0.0.RELEASE'
+
 
 }
 
