@@ -1,6 +1,5 @@
 package com.edoctor.controller;
 
-import com.edoctor.bean.Employee;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -25,20 +24,6 @@ public class EmployeeController {
         return "websock";
     }
 
-    @RequestMapping(value="/register", method = POST)
-    public String processRegistration(@Valid Employee employee, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return "register";
-        } else {
-            return "index";
-        }
-    }
-
-//    @RequestMapping(value="login", method = POST)
-//    public String handleLogin() {
-//        return "index";
-//    }
-//
     @RequestMapping(value="index", method = GET)
     public String index() {
         return "websock";

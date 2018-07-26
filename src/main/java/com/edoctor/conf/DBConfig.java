@@ -20,7 +20,7 @@ public class DBConfig {
         ds.setInitialSize(10);
         ds.setDefaultAutoCommit(true);
         ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/edoctor?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8");
+        ds.setUrl("jdbc:mysql://localhost:3306/alipay?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8");
         ds.setUsername("root");
         ds.setPassword("123456");
         return ds;

@@ -1,0 +1,50 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}" type="text/javascript"></script>
+</head>
+
+<body>
+
+<form id="payForm" th:action="@{/alipay/goAlipay}" method="POST">
+    <input type="hidden" name="orderId" th:value="${order.id}"/>
+    <table>
+        <tr>
+            <td th:text="'订单编号：'+${order.id}"></td>
+        </tr>
+        <tr>
+            <td th:text="'产品名称：'+${product.name}"></td>
+        </tr>
+        <tr>
+            <td th:text="'订单价格:'+${order.orderAmount}"></td>
+        </tr>
+        <tr>
+            <td th:text="'购买个数：'+${order.buyCounts}"></td>
+        </tr>
+        <tr>
+        <td>
+            <input type="submit" value="前往支付宝进行支付">
+            <input type="button" value="微信扫码支付" onclick="wxpayDisplay()">
+        </td>
+        </tr>
+    </table>
+</form>
+
+
+<input type="hidden" id="hdnContextPath" name="hdnContextPath" value="<%=request.getContextPath() %>"/>
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+    function wxpayDisplay() {
+        debugger;
+
+        var hdnContextPath = $("#hdnContextPath").val();
+
+        $("#payForm").attr("action", hdnContextPath + "/wxpay/createPreOrder.action");
+        $("#payForm").submit();
+    }
+
+</script>
+

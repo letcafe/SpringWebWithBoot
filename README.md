@@ -43,3 +43,6 @@
 2. New: STOMP integration
 3. New: webjars("org.webjars.bower") integration
 
+### 2018-7-25
+1. New: AliPay is on integration
+

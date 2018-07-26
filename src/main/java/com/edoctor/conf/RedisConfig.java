@@ -1,6 +1,6 @@
 package com.edoctor.conf;
 
-import com.edoctor.bean.Device;
+import com.edoctor.bean.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.context.annotation.Bean;
@@ -22,11 +22,11 @@ public class RedisConfig {
     Logger LOG = LogManager.getLogger(RedisConfig.class);
 
     @Bean
-    public RedisTemplate<String, Device> redisTemplate(RedisConnectionFactory cf) {
-        RedisTemplate<String, Device> redis = new RedisTemplate<>();
+    public RedisTemplate<String, User> redisTemplate(RedisConnectionFactory cf) {
+        RedisTemplate<String, User> redis = new RedisTemplate<>();
         redis.setConnectionFactory(cf);
         redis.setKeySerializer(new StringRedisSerializer());
-        redis.setValueSerializer(new Jackson2JsonRedisSerializer<>(Device.class));
+        redis.setValueSerializer(new Jackson2JsonRedisSerializer<>(User.class));
         return redis;
     }
 

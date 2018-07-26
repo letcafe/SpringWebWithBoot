@@ -1,6 +1,6 @@
 package com.edoctor.conf;
 
-import com.edoctor.bean.Employee;
+import com.edoctor.bean.User;
 import com.edoctor.controller.ConsumeMQController;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.pool.PooledConnectionFactory;
@@ -53,7 +53,7 @@ public class MQConfig {
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
         converter.setTargetType(MessageType.TEXT);
         Map<String, Class<?>> typeIdMap = new HashMap<>();
-        typeIdMap.put("Employee", Employee.class);
+        typeIdMap.put("User", User.class);
         converter.setTypeIdMappings(typeIdMap);
         converter.setTypeIdPropertyName("Employee");
         converter.setEncoding("UTF-8");

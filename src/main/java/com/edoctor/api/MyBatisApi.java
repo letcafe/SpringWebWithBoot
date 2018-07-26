@@ -38,7 +38,7 @@ public class MyBatisApi {
             @ApiResponse(code = 400, message = "error: mongo db come across an error", response = RestMessage.class)})
     @RequestMapping(value = "/getUserById", method = RequestMethod.GET, produces = "application/json")
     public RestMessage<User> getUserById(
-            @ApiParam(name = "userId", required = true, value = "用户Id值") @RequestParam(name = "userId") Integer userId){
+            @ApiParam(name = "userId", required = true, value = "用户Id值") @RequestParam(name = "userId") String userId){
         RestMessage<User> restMessage = new RestMessage<>();
         User user = userService.getUserById(userId);
         restMessage.setCode(200).setMsg("success").setData(user);
@@ -66,7 +66,8 @@ public class MyBatisApi {
             @ApiParam(name = "userId", required = true, value = "用户Id值") @RequestParam(name = "userId") Integer userId,
             @ApiParam(name = "sex", required = true, value = "用户性别") @RequestParam(name = "sex") String sex){
         RestMessage<User> restMessage = new RestMessage<>();
-        userService.updateUserSexById(userId, sex);
+        User user = new User();
+        userService.updateUserById(user);
         restMessage.setCode(200).setMsg("success").setData(null);
         return restMessage;
     }
@@ -77,7 +78,7 @@ public class MyBatisApi {
             @ApiResponse(code = 400, message = "error: mongo db come across an error", response = RestMessage.class)})
     @RequestMapping(value = "/deleteUserById", method = RequestMethod.DELETE, produces = "application/json")
     public RestMessage<User> deleteUserById(
-            @ApiParam(name = "userId", required = true, value = "用户Id值") @RequestParam(name = "userId") Integer userId){
+            @ApiParam(name = "userId", required = true, value = "用户Id值") @RequestParam(name = "userId") String userId){
         RestMessage<User> restMessage = new RestMessage<>();
         userService.deleteUserById(userId);
         restMessage.setCode(200).setMsg("success").setData(null);
@@ -96,7 +97,7 @@ public class MyBatisApi {
             @ApiParam(name = "sex", required = true, value = "性别") @RequestParam(name = "sex") String sex
             ){
         RestMessage<User> restMessage = new RestMessage<>();
-        userService.addOneUser(userId, name, depId, sex);
+        userService.saveUser(new User());
         restMessage.setCode(200).setMsg("success").setData(null);
         return restMessage;
     }

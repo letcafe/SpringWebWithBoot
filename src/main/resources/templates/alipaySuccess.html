@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}" type="text/javascript"></script>
+</head>
+
+<body>
+<h1 style="color: green;">购买成功</h1>
+<table>
+    <tr>
+        <td th:text="'订单编号: '+${out_trade_no}"></td>
+    </tr>
+    <tr>
+        <td th:text="'支付宝交易号: '+${trade_no}"></td>
+    </tr>
+    <tr>
+        <td th:text="'实付金额: '+${total_amount}"></td>
+    </tr>
+    <tr>
+        <td th:text="'购买产品：'+${productName}"></td>
+    </tr>
+</table>
+</body>
+
+</html>
+
+

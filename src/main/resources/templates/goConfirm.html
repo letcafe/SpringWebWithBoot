@@ -1,0 +1,71 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- default header name is X-CSRF-TOKEN,用于解决Spring对Ajax的拦截 -->
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+
+    <script th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}" type="text/javascript"></script>
+</head>
+
+<body>
+
+<form th:action="@{/alipay/createOrder}" method="post">
+    <input type="hidden" id="productId" name="productId" th:value="${product.id }"/>
+    <table>
+        <tr>
+            <td th:text="'产品编号:'+${product.id}"></td>
+        </tr>
+        <tr>
+            <td th:text="'产品名称:'+${product.name}"></td>
+        </tr>
+        <tr>
+            <td th:text="'产品价格:'+${product.price}"></td>
+        </tr>
+        <td>
+            购买个数： <input id="buyCounts" name="buyCounts"/>
+        </td>
+        </tr>
+        </tr>
+        <td>
+            <input type="submit" value="form提交，生成订单"/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="ajax提交，生成订单" onclick="createOrder()"/>
+        </td>
+        </tr>
+    </table>
+</form>
+
+
+<input type="hidden" id="hdnContextPath" name="hdnContextPath" th:value="@{/}"/>
+<script type="text/javascript">
+    function createOrder() {
+        var token = $("meta[name='_csrf']").attr("content");
+        var header = $("meta[name='_csrf_header']").attr("content");
+        $.ajax({
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader(header, token);
+            },
+            url: $('#hdnContextPath').val() + 'alipay/createOrder',
+            type: "POST",
+            data: {"productId": $("#productId").val(), "buyCounts": $("#buyCounts").val()},
+            dataType: "json",
+            success: function (data) {
+                if (data.status == 200 && data.msg == "OK") {
+                    debugger;
+                    // 提交订单成功后, 进入购买页面
+                    window.location.href = $('#hdnContextPath').val() + "alipay/goPay?orderId=" + data.data;
+                } else {
+                    alert(data.msg);
+                    console.log(JSON.stringify(data));
+                }
+            }
+        });
+    }
+
+</script>
+</body>
+
+</html>
+
+
+

@@ -2,7 +2,6 @@ package com.edoctor.api;
 
 import com.edoctor.bean.RestMessage;
 import com.edoctor.enums.EMAIL_LOCALE;
-import com.edoctor.service.DeviceService;
 import com.edoctor.service.EmailService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,13 +21,10 @@ import java.util.Locale;
 @RequestMapping("/api/v1/email")
 public class EmailApi {
 
-    private DeviceService deviceService;
-
     private EmailService emailService;
 
     @Autowired
-    EmailApi(DeviceService deviceService, EmailService emailService) {
-        this.deviceService = deviceService;
+    EmailApi(EmailService emailService) {
         this.emailService = emailService;
     }
 

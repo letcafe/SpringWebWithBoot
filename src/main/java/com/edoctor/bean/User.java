@@ -1,45 +1,35 @@
 package com.edoctor.bean;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "user")
 public class User {
-    private Integer id;
-    private String userId;
-    private String name;
-    private String depId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
+
+    private String username;
+
     private String sex;
 
     public User() {
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(String id) {
+        this.id = id == null ? null : id.trim();
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDepId() {
-        return depId;
-    }
-
-    public void setDepId(String depId) {
-        this.depId = depId;
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
     public String getSex() {
@@ -47,18 +37,12 @@ public class User {
     }
 
     public void setSex(String sex) {
-        this.sex = sex;
+        this.sex = sex == null ? null : sex.trim();
     }
 
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", userId='" + userId + '\'' +
-                ", name='" + name + '\'' +
-                ", depId='" + depId + '\'' +
-                ", sex='" + sex + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + ", sex=" + sex + "]";
+	}
+    
 }
