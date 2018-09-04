@@ -17,10 +17,11 @@
 + Support: Intellij IDEA + Eclipse
 
 ## 生成HTML，PDF接口文档
-1. 在src/docs/swagger中，存入目标的json文件或者yaml文件，本例中以target.json为例（json文件为swagger导出的/v2/api-docs的文本值）
-2. 在terminal中执行该命令：
+在src/docs/swagger中，存入目标的json文件或者yaml文件，本例中以target.json为例（json文件为swagger导出的/v2/api-docs的文本值）
+在terminal中执行该命令
+
     gradlew asciidoctor
-3. 可在build/asciidoc/html5/index.html中得到最新生成的文档，PDF直接用工具转换即可（该独立HTML可直接导出）
+可在build/asciidoc/html5/index.html中得到最新生成的文档，PDF直接用工具转换即可（该独立HTML可直接导出）
 
 ## 开发日志
 ### 2018-3-31 
