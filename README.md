@@ -26,13 +26,13 @@
 可在build/asciidoc/html5/index.html中得到最新生成的文档，PDF直接用工具转换即可（该独立HTML可直接导出）
 
 ## 开发日志
-### 2018-3-31 
+### 2018-03-31 
 1. New：使用SpringBoot替代SpringMVC
 
-### 2018-4-2 
+### 2018-04-2 
 1. New：Spring email支持包括plain文本以及带附件的邮件
 
-### 2018-4-5 
+### 2018-04-05 
 1. New：Redis集成
 2. New：ActiveMQ集成
 3. New：Email集成
@@ -41,18 +41,18 @@
 6. New：Jmx集成
 7. New：log4j2集成
 
-### 2018-4-25 
+### 2018-04-25 
 1. New：MyBatis集成
 
-### 2018-7-3
+### 2018-07-03
 1. New: WebSocket集成
 2. New: SockJS集成
 3. New: STOMP集成
 
-### 2018-7-25
+### 2018-07-25
 1. New: 支持阿里支付宝交易
 
-### 2018-7-25
+### 2018-09-04
 1. New: 新增API接口HTML，PDF文档支持导出
 1. New: 新增.gitignore
 
