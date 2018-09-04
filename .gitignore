@@ -1,0 +1,19 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+${catalina.home}/
+.gitignore
+.gradle/
+.idea/dataSources.local.xml
+.idea/dataSources/
+.idea/inspectionProfiles/
+.idea/workspace.xml
+build/
+out/
+src/test/resources/
