@@ -33,4 +33,9 @@ public class EmployeeController {
     public String login() {
         return "login";
     }
+
+    @RequestMapping(value="swagger", method = GET)
+    public String swagger() {
+        return "swagger";
+    }
 }

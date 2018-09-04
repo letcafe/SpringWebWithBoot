@@ -1,4 +1,4 @@
-package com.edoctor.controller;
+package com.edoctor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
