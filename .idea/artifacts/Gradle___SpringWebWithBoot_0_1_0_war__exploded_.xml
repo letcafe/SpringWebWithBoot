@@ -53,6 +53,7 @@
           <element id="library" level="project" name="Gradle: org.webjars.bower:bootstrap:4.1.1" />
           <element id="library" level="project" name="Gradle: org.webjars.bower:stomp-websocket:2.3.4" />
           <element id="library" level="project" name="Gradle: org.webjars.bower:jquery:3.3.1" />
+          <element id="library" level="project" name="Gradle: com.io7m.xom:xom:1.2.10" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.0.0.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter:2.0.0.RELEASE" />
           <element id="library" level="project" name="Gradle: org.hibernate.validator:hibernate-validator:6.0.7.Final" />
@@ -132,6 +133,8 @@
           <element id="library" level="project" name="Gradle: io.netty:netty-codec-http:4.1.25.Final" />
           <element id="library" level="project" name="Gradle: io.netty:netty-handler:4.1.25.Final" />
           <element id="library" level="project" name="Gradle: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.25.Final" />
+          <element id="library" level="project" name="Gradle: xerces:xercesImpl:2.8.0" />
+          <element id="library" level="project" name="Gradle: xalan:xalan:2.7.0" />
           <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.19" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.4" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.4" />

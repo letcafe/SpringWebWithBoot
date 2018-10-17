@@ -57,6 +57,7 @@
     <orderEntry type="library" name="Gradle: org.webjars.bower:bootstrap:4.1.1" level="project" />
     <orderEntry type="library" name="Gradle: org.webjars.bower:stomp-websocket:2.3.4" level="project" />
     <orderEntry type="library" name="Gradle: org.webjars.bower:jquery:3.3.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.io7m.xom:xom:1.2.10" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:2.0.0.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate.validator:hibernate-validator:6.0.7.Final" level="project" />
@@ -136,6 +137,8 @@
     <orderEntry type="library" name="Gradle: io.netty:netty-codec-http:4.1.25.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-handler:4.1.25.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.25.Final" level="project" />
+    <orderEntry type="library" name="Gradle: xerces:xercesImpl:2.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: xalan:xalan:2.7.0" level="project" />
     <orderEntry type="library" name="Gradle: org.yaml:snakeyaml:1.19" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.4" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.4" level="project" />
