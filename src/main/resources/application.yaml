@@ -10,9 +10,26 @@ spring:
     sentinel:
       master: myMaster
       nodes: 59.110.231.87:6480
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/live_spider?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&character_set_server=utf8mb4&&characterEncoding=utf-8
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 10
+      auto-commit: true
+      minimum-idle: 2
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
   jpa:
-    # make Spring do db operation when render web views
-    open-in-view: true
+    open-in-view: false
+    generate-ddl: false
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
 server:
   port: 8080
   servlet:
