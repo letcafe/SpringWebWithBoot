@@ -23,7 +23,7 @@
 
     gradlew asciidoctor
     
-可在build/asciidoc/html5/index.html中得到最新生成的文档，PDF直接用工具转换即可（该独立HTML可直接导出）
+可在build/asciidoc/html5/index.html中得到最新生成的文档，PDF直接用工具转换即可（该独立HTML可直接导出）。
 
 ## 开发日志
 ### 2018-03-31 
